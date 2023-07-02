@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="44.457" tests="7" skipped="0" failures="0" errors="0">
+<testcase classname="Feature to test duplicate profile registration" name="Check duplicate profile validation for registration - Example #1.1" time="7.884">
+<system-out><![CDATA[
+Given invoke browser........................................................passed
+And user is on registration page............................................passed
+When user enters Buggy123, John, Doe Abcd@123 and Abcd@123..................passed
+And click on the register button............................................passed
+Then user is already registered.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Feature to test login functionality" name="Check login is successful with valid credentials - Example #1.1" time="5.661">
+<system-out><![CDATA[
+Given browser is opened.....................................................passed
+And user is on login page...................................................passed
+When user enters Buggy1234 and Abcd@123.....................................passed
+And click on login button...................................................passed
+Then user is navigated to the home page.....................................passed
+And click on logout button..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Feature to test Password Validation functionality" name="Password validation during registration (missing Upper character) - Example #1.1" time="6.435">
+<system-out><![CDATA[
+Given browser is open.......................................................passed
+And user is on the registration page........................................passed
+When user enters JohnDoe1 and password@123..................................passed
+And user click on the register button.......................................passed
+Then user see an error message indicating the password requirements.........passed
+]]></system-out>
+</testcase>
+<testcase classname="Feature to test Password Validation functionality" name="Password validation during registration (missing special character) - Example #1.1" time="5.899">
+<system-out><![CDATA[
+Given browser is open.......................................................passed
+And user is on the registration page........................................passed
+When user enters JohnDoe2 and Password123...................................passed
+And user click on the register button.......................................passed
+Then user see an error message indicating the password requirements.........passed
+]]></system-out>
+</testcase>
+<testcase classname="Feature to test Password Validation functionality" name="Password validation during registration (missing lowercase) - Example #1.1" time="5.978">
+<system-out><![CDATA[
+Given browser is open.......................................................passed
+And user is on the registration page........................................passed
+When user enters JohnDoe3 and PASSWORD@123..................................passed
+And user click on the register button.......................................passed
+Then user see an error message indicating the password requirements.........passed
+]]></system-out>
+</testcase>
+<testcase classname="Feature to test Password Validation functionality" name="Password validation during registration (less than 8 characters) - Example #1.1" time="6.171">
+<system-out><![CDATA[
+Given browser is open.......................................................passed
+And user is on the registration page........................................passed
+When user enters JohnDoe4 and Pass@12.......................................passed
+And user click on the register button.......................................passed
+Then user see an error message indicating the password requirements.........passed
+]]></system-out>
+</testcase>
+<testcase classname="Feature to test Page Registration functionality" name="Check registration is successful with valid credentials - Example #1.1" time="6.088">
+<system-out><![CDATA[
+Given browser is invoked....................................................passed
+And user is on register page................................................passed
+When user enters JohnDoe, John, Doe Abcd@123 and Abcd@123...................passed
+And click on register button................................................passed
+Then user is registered.....................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
